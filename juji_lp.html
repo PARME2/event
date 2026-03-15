@@ -705,6 +705,37 @@
   }
   .news-cta:hover { background: var(--accent); color: var(--white); }
 
+  .event-cta-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .event-cta-wrap .news-cta { flex: 1; min-width: 180px; }
+  .news-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-mid);
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .news-cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
+  .event-meet-detail {
+    font-size: 12px;
+    color: var(--ink-light);
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+  .event-meet-detail a { color: var(--accent); text-decoration: none; }
+  .event-meet-detail a:hover { text-decoration: underline; }
+
   /* ── MOBILE UX ── */
   /* タップ時のハイライト除去 */
   a, button { -webkit-tap-highlight-color: transparent; }
@@ -866,6 +897,10 @@
       font-size: 13px;
       border-radius: 3px;
     }
+    .event-cta-wrap { flex-direction: column; }
+    .event-cta-wrap .news-cta,
+    .news-cta-secondary { width: 100%; justify-content: center; min-width: unset; }
+    .event-meet-detail { font-size: 11px; }
 
     /* Section③ Features */
     .features-grid { gap: 1px; margin-bottom: 32px; }
@@ -1138,11 +1173,11 @@
       <div class="news-badge">NEW</div>
       <div class="news-body">
         <div class="news-date">
-          <span class="news-date-main">2026 / 04 / 03 <span class="news-day">FRI</span></span>
-          <span class="news-time">17:00 — 18:30</span>
+          <span class="news-date-main">4月 3日（金） <span class="news-day">FRI</span></span>
+          <span class="news-time">17:00 — 18:30（Asia/Tokyo）</span>
         </div>
         <div class="news-content">
-          <div class="news-title">第1回 コミュニティ・テーマ会議</div>
+          <div class="news-title">第一回 コミュニティ テーマ会議</div>
           <div class="news-desc">
             ハッカソンやインターンのお題を、参加者みんなで決める会議です。<br>
             「どんな社会課題を解きたいか」「どんなプロダクトを作りたいか」——<br>
@@ -1155,9 +1190,16 @@
             </svg>
             あなたの一声が、プロジェクトの出発点になります。
           </div>
+          <div class="event-meet-detail">
+            ビデオ通話: <a href="https://meet.google.com/ucg-wctw-qhh" target="_blank" rel="noopener">meet.google.com/ucg-wctw-qhh</a><br>
+            ダイヤルイン: (JP) +81 3-4545-0450　PIN: 830 976 290 5766#
+          </div>
         </div>
       </div>
-      <a href="#cta" class="news-cta">この会議に参加する →</a>
+      <div class="event-cta-wrap">
+        <a href="https://meet.google.com/ucg-wctw-qhh" target="_blank" rel="noopener" class="news-cta">Meetで参加する →</a>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=%E7%AC%AC%E4%B8%80%E5%9B%9E%20%E3%82%B3%E3%83%9F%E3%83%8B%E3%83%86%E3%82%A3%20%E3%83%86%E3%83%BC%E3%83%9E%E4%BC%9A%E8%AD%B0&amp;dates=20260403T080000Z/20260403T093000Z&amp;details=%E3%83%93%E3%83%87%E3%82%A3%E3%82%AA%E9%80%9A%E8%A9%B1%3A%20https%3A%2F%2Fmeet.google.com%2Fucg-wctw-qhh%0A%E3%83%80%E3%82%A4%E3%83%A4%E3%83%AB%E3%82%A4%E3%83%B3%3A%20(JP)%20%2B81%203-4545-0450%20PIN%3A%20830%20976%20290%205766%23&amp;location=https%3A%2F%2Fmeet.google.com%2Fucg-wctw-qhh" target="_blank" rel="noopener" class="news-cta-secondary">📅 カレンダーに追加</a>
+      </div>
     </div>
   </div>
 </div>
