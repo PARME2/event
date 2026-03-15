@@ -782,10 +782,13 @@
     }
   }
 
+  .hero-wrap { padding: 0; }
+
   /* ── TABLET ── */
   @media (max-width: 900px) {
+    .hero-wrap { padding: 0 24px; }
     nav { padding: 16px 24px; }
-    .hero { grid-template-columns: 1fr; padding: 110px 24px 56px; gap: 40px; }
+    .hero { grid-template-columns: 1fr; padding: 110px 0 56px; gap: 40px; }
     .hero-visual { display: none; }
     section { padding: 64px 24px; }
     .projects-inner { padding: 64px 24px; }
@@ -803,6 +806,7 @@
 
   /* ── MOBILE ── */
   @media (max-width: 480px) {
+    .hero-wrap { padding: 0 24px; }
     /* Nav */
     nav { padding: 14px 24px; }
     .nav-logo { font-size: 18px; }
@@ -810,7 +814,7 @@
 
     /* Hero */
     .hero {
-      padding: 96px 24px 52px;
+      padding: 96px 0 52px;
       gap: 32px;
     }
     .hero-tag {
@@ -948,8 +952,8 @@
 </nav>
 
 <!-- HERO -->
-<div style="max-width:1200px;margin:0 auto;padding:0;">
-  <section style="padding:0;" class="hero">
+<div class="hero-wrap" style="max-width:1200px;margin:0 auto;">
+  <section class="hero">
     <div>
       <div class="hero-tag">Next-Gen Student Community</div>
       <h1 class="hero-heading">
